@@ -9,13 +9,13 @@ class ErrorBoundary extends Component {
   componentDidCatch(error, info) {
     // I log this to Sentry, Azure Monitor, New Relic, TrackJS
     console.error("Erroroundary caught an error", error, info);
-    setTimeout(() => this.setState({ redirect: true }), 5000);
   }
 
-  //   componentDidUpdate() {
-  //     if (this.state.hasError) {
-  //     }
-  //   }
+  componentDidUpdate() {
+    if (this.state.hasError) {
+      setTimeout(() => this.setState({ redirect: true }), 5000);
+    }
+  }
 
   render() {
     if (this.state.redirect) {
