@@ -21,7 +21,9 @@ const App = () => {
               <Details />
             </Route>
             <Route path="/">
-              <SearchParams />
+              <ThemeContext.Provider value={["gray"]}>
+                <SearchParams />
+              </ThemeContext.Provider>
             </Route>
           </Switch>
         </Router>
