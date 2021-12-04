@@ -24,7 +24,7 @@
     "dev": "parcel src/index.html",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
-    "build": "vercel-build --output public"
+    "build": "vercel build --output public"
   },
   "repository": {
     "type": "git",
